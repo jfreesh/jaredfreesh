@@ -1,0 +1,86 @@
+/* style.css */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    color: #6c6f73;
+}
+
+h1,h2,h3,h4,h5 {
+    color: #333;
+}
+
+h6 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+.jumbotron-heading {
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: #333;
+    border: none;
+    padding: 0;    
+    color: #343a40; 
+}
+
+.jumbotron .container {
+    max-width: 40rem;
+    background: rgba(255,255,255,0.8);
+    padding: 2rem;
+}
+
+.blockquote-footer {
+    margin: 1rem 0 0;
+}
+
+#stage {
+    background: url('images/AdobeStock2_176715936.jpg') center center no-repeat;
+    background-size: cover;
+    background-color: #343a40;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.feature-content {
+    padding: 4rem 0;
+    overflow: hidden;
+}
+
+#main-footer {
+    background: #343a40;
+    padding: 6rem 0;
+    font-size: 0.8rem;
+}
+
+#main-footer h6 {
+    color: #718FA9;
+}
+
+#main-footer a, p {
+    color: #85888c
+}
+
+/* Media Queries */
+
+@media screen and ( min-width : 991px ) {
+    
+    .feature-content {
+        display: flex;
+        align-items: center;
+    }
+    
+}

@@ -1,0 +1,42 @@
+{% extends 'about/base.html' %}
+
+{% block content %}
+{% load static %}
+<section id="stage" class="jumbotron text-center">
+  <div class="container">
+<blockquote class="blockquote jumbotron-heading">
+  <p class="mb-0">He does whatever it takes to bring a solution on-line.</p>
+    <footer class="blockquote-footer">
+      COO, Weekends Only
+      <cite title="Source Title">
+        <a href="https://www.linkedin.com/in/jaredfreesh/"> via LinkedIn</a>
+      </cite>
+    </footer>
+</blockquote>
+  </div>
+</section>
+<section id="about">
+<div class="container">
+<div class="row">
+  <div class="feature-content">
+    <div class="col-lg-6 d-none d-lg-block">
+      <img src="{% static 'about/images/me4.jpg' %}" alt="Jared">
+    </div>
+    <div class="col-lg-5 offset-lg-1">
+      <h6>About</h6>
+                  <h2>Jared Freesh</h2>
+                  <p class="lead">Since 2008, I have worked in a variety of Information Technology roles with a single mission statement: <strong>Drive Business Results through Technology.</strong> My mission was born out of years working in retail store environments hungry for the next challenge and a hardened belief that there is always a better, more efficient way to do just about anything. Whatever my role has been or will become, I mark it by:</p>
+                  <ul>
+                    <li>Partnering with a strong team</li>
+                    <li>Difficulty putting any puzzle down</li>
+                    <li>Achieving meaningful goals</li>
+                  </ul>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- Next Section gets something about work  and maybe this embedded Youttube video (or maybe more on my socials???_)-->
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/WTpSPtM50dE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+<!-- Next Section: Cards about my favorite tools and what I use them for -->
+{% endblock %}

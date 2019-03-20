@@ -1,0 +1,34 @@
+{% extends 'crypto/base.html' %}
+
+{% block content %}
+<div class="container">
+	{% if notfound %}
+		<div class="jumbotron text-light bg-dark">
+			<h1 class="display-4">Price Search!</h1>
+			<p class="lead">Enter a crypto currency symbol into the Navbar "Lookup Crypto" field above...</p>
+			<hr class="my-4">
+			<p>Then, just click "Lookup"" for current Price, 24h High, 24h Low, and Market Cap will all be returned to this screen.</p>
+		</div>
+	{% else %}
+		{% if crypto.Response == 'Error' %}
+			<div class="jumbotron text-light bg-dark">
+				<h1 class="display-4">{{ crypto.Response }}</h1>
+				<p class="lead">{{ crypto.Message }}</p>
+			</div>
+		{% else %}		
+			{% for key,value in crypto.DISPLAY.items %}
+			<div class="jumbotron text-light bg-dark">
+				<h1 class="display-4">{{ key }}</h1>
+				<hr class="my-4">
+				<p>
+					<strong>Price: </strong>{{ value.USD.PRICE }}<br>
+					<strong>24h High: </strong>{{ value.USD.HIGHDAY }}<br>
+					<strong>24h Low: </strong>{{ value.USD.LOWDAY }}<br>
+					<strong>Market Cap: </strong>{{ value.USD.MKTCAP }}<br>
+				</p>
+			</div>	
+			<br>
+			{% endfor %}
+		{% endif %}
+	{% endif %}
+{% endblock %}

@@ -1,0 +1,17 @@
+/* style.css */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizelegibility;
+    color: #6c6f73;
+}
+
+.container {
+	padding-top: 5rem;
+
+}

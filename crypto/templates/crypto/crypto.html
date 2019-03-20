@@ -1,0 +1,58 @@
+{% extends 'crypto/base.html' %}
+
+{% block content %}
+
+<div class="container">
+	<div class="jumbotron text-light bg-dark">
+		<h1 class="display-4">Crypto Currency</h1>
+		<p class="lead">The Crypto App was built as fun, side project. The current page displays pricing information for several types of coin and many recent artcles about Crypto Currency. 
+		<hr class="my-4">
+		<p class="lead">Alternatively, enter a crypto currency symbol into the Navbar "Lookup Crypto" field above...</p>
+		<p>Then, just click "Lookup" for current Price, 24h High, 24h Low, and Market Cap will all be returned.</p>
+		<p><small>Thank you to John Elder and Codemy.com for the Crypto New Network course!</small></p>
+		<h1>Selected Coins:</h1>
+		<table class="table table-striped table-bordered table-hover text-light">
+			<thead>
+				<tr>
+					<th scope="col">Name</th>
+					<th scope="col">Price</th>
+					<th scope="col">24h High</th>
+					<th scope="col">24h Low</th>
+					<th scope="col">Market Cap</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for key,value in price.DISPLAY.items %}
+				<tr>
+					<td>{{ key }}</td>
+					<td>{{ value.USD.PRICE }}</td>
+					<td>{{ value.USD.HIGHDAY }}</td>
+					<td>{{ value.USD.LOWDAY }}</td>
+					<td>{{ value.USD.MKTCAP }}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="py-5 bg-dark">
+	<div class="container">
+		<h1 class="text-light">Recent Crypto Currency Articles:</h1>
+		<div class="row">
+			{% for x in news.Data %}
+	        <div class="col-md-4">
+	        	<div class="card mb-4 box-shadow">	
+	        		<img class="card-img-top" src="{{ x.imageurl }}" alt="{{ x.source }}">
+	                <div class="card-body">
+						<h5 class="card-title">{{ x.title }}</h5>
+						<p class="card-text">{{ x.body }}</p>
+						<a href="{{ x.url }}" class="btn btn-primary">Read More...</a>
+	            	</div>	
+	           	</div>
+	       	</div>
+	       	{% endfor %}
+	   	</div>
+	</div>
+</div>
+{% endblock %}

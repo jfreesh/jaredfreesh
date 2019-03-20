@@ -1,3 +1,3 @@
 # Jared Freesh personal Website
 
-About Jared, find projects, and personal musings
+About Jared, fun projects, and personal musings
